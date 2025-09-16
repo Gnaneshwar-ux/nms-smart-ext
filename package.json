@@ -1,0 +1,61 @@
+{
+  "name": "smart-suggestion-ext",
+  "displayName": "Smart Suggestion Extension",
+  "description": "Shows a left-side chatbot-like panel with intelligent code suggestions",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "activationEvents": [
+    "onView:smartSuggestionView"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "smartSuggestionContainer",
+          "title": "Smart Suggestion",
+          "icon": "$(comment-discussion)"
+        }
+      ]
+    },
+    "views": {
+      "smartSuggestionContainer": [
+        {
+          "id": "smartSuggestionView",
+          "name": "Suggestions",
+          "type": "webview"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "smartSuggestionView",
+        "contents": "Loading Smart Suggestions...\n[Open View](command:smartSuggestionView.focus)"
+      }
+    ],
+    "commands": [
+      {
+        "command": "smartSuggestionView.focus",
+        "title": "Focus Smart Suggestions",
+        "category": "Smart Suggestion"
+      },
+      {
+        "command": "smartSuggestion.insertText",
+        "title": "Insert Suggestion",
+        "category": "Smart Suggestion"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm install",
+    "package": "vsce package"
+  },
+  "dependencies": {
+    "natural": "^6.3.0"
+  },
+  "devDependencies": {
+    "vscode": "^1.1.37"
+  }
+}

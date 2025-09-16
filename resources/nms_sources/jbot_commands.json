@@ -1,0 +1,32 @@
+[
+  {
+    "title": "For Loop",
+    "description": "A standard for loop to iterate over a range of values",
+    "code": "for (let i = 0; i < array.length; i++) {\n  // Your code here\n}",
+    "icon": "🔁"
+  },
+  {
+    "title": "Function Definition",
+    "description": "Define a new function with parameters",
+    "code": "function functionName(param1, param2) {\n  // Function body\n  return result;\n}",
+    "icon": "ƒ"
+  },
+  {
+    "title": "If Statement",
+    "description": "Conditional execution based on a boolean expression",
+    "code": "if (condition) {\n  // Code to execute if condition is true\n}",
+    "icon": "❓"
+  },
+  {
+    "title": "Try-Catch Block",
+    "description": "Handle errors gracefully with try-catch",
+    "code": "try {\n  // Code that might throw an error\n} catch (error) {\n  // Handle the error\n}",
+    "icon": "⚠️"
+  },
+  {
+    "title": "Array Map",
+    "description": "Transform each element of an array",
+    "code": "const newArray = array.map(item => {\n  return transformedItem;\n});",
+    "icon": "🗺️"
+  }
+]

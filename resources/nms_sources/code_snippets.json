@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Promise",
+    "description": "Create a new Promise for asynchronous operations",
+    "code": "new Promise((resolve, reject) => {\n  // Asynchronous operation\n  if (success) {\n    resolve(value);\n  } else {\n    reject(error);\n  }\n});",
+    "icon": "⏳"
+  },
+  {
+    "title": "Class Definition",
+    "description": "Define a new class with constructor and methods",
+    "code": "class ClassName {\n  constructor(param1, param2) {\n    this.param1 = param1;\n    this.param2 = param2;\n  }\n\n  methodName() {\n    // Method body\n  }\n}",
+    "icon": "C"
+  },
+  {
+    "title": "HTTP Request",
+    "description": "Make an HTTP request using fetch API",
+    "code": "fetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Error:', error));",
+    "icon": "🌐"
+  },
+  {
+    "title": "Event Listener",
+    "description": "Add an event listener to DOM element",
+    "code": "element.addEventListener('click', (event) => {\n  // Handle event\n});",
+    "icon": "👂"
+  },
+  {
+    "title": "Timeout Function",
+    "description": "Execute code after a delay",
+    "code": "setTimeout(() => {\n  // Code to execute after delay\n}, 1000);",
+    "icon": "⏰"
+  }
+]
