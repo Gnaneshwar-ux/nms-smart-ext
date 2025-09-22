@@ -1,0 +1,5 @@
+{
+  "java.project.referencedLibraries": [
+    "C:/Oracle NMS/VM/nmslib/**/*.jar"
+  ]
+}

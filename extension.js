@@ -222,36 +222,39 @@ class SmartSuggestionViewProvider {
           }
           
           .suggestion-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
-          }
-          
-          .suggestion-icon {
-            font-size: 18px;
-            margin-right: 12px;
-            width: 24px;
-            text-align: center;
-          }
-          
-          .suggestion-title {
-            flex: 1;
-            margin: 0;
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--vscode-button-foreground);
-          }
-          
-          .copy-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 14px;
-            padding: 4px 8px;
-            border-radius: 3px;
-            background-color: var(--vscode-button-secondaryBackground);
-            color: var(--vscode-button-secondaryForeground);
-          }
+  display: flex;
+  align-items: center;
+  gap: 8px; /* small space between icon/title/button */
+}
+
+.suggestion-icon {
+  flex: 0 0 auto; /* fixed */
+}
+
+.suggestion-title {
+  flex: 1 1 auto;        /* allow shrink */
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--vscode-button-foreground);
+  overflow: hidden;      /* hide overflow */
+  text-overflow: ellipsis;
+  white-space: nowrap;   /* one line */
+  min-width: 0;          /* IMPORTANT for flexbox shrink */
+}
+
+.copy-btn {
+  flex: 0 0 auto; /* keep button fixed */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background-color: var(--vscode-button-secondaryBackground);
+  color: var(--vscode-button-secondaryForeground);
+}
+
           
           .copy-btn:hover {
             background-color: var(--vscode-button-secondaryHoverBackground);
